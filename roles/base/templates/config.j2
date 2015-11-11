@@ -1,0 +1,10 @@
+{% if host.type == juniper %}
+system {
+  hostname {{ inventory_hostname|lower }}
+  root-authentication {
+        encrypted-password "{{ root_hash }}";
+    }
+}
+{% elseif host.type == arista %}
+
+{% endif %}

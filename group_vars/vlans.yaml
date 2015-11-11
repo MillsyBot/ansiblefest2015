@@ -1,0 +1,10 @@
+---
+vlan:
+  - id: 10
+    default_gateway: 192.168.10.1
+    network: 192.168.10.0
+    cidr: 24
+  - id: 20
+    default_gateway: 192.168.20.1
+    network: 192.168.20.0
+    cidr: 24

@@ -1,0 +1,5 @@
+host:
+  name: switch2.site2
+  console:
+    ip: 192.168.0.2
+    port: 4

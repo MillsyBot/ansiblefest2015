@@ -1,0 +1,24 @@
+{% if host.type == juniper %}
+	{% if host.name.find("router") == 0 %}
+	interfaces vlan {
+		unit {{ vlan.id }} {
+			family inet {
+				address {{ vlan.default_gateway }}/{{ vlan.cidr }}
+				}
+			}
+		}
+		vlans {{ vlan.id }} {
+			l3-interface vlan.{{ vlan.id }};
+		}
+		{% endif %}
+		vlans {{ vlan.id }} {
+			vlan-id {{ vlan.id }};
+	 }
+{% elseif host.type == arista %}
+	{% if host.name.find("router") == 0 %}
+		vlan {{ vlan.id }}
+		interface vlan {{ vlan.id }}
+		ip address {{ vlan.default_gateway }}/{{ vlan.cidr }}
+	{% endif %}
+	vlan {{ vlan.id }}
+{% endif %}

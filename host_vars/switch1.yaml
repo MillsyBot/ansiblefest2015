@@ -1,0 +1,6 @@
+host:
+  type: "arista"
+  name: switch1.site1
+  console:
+    ip: 192.168.0.2
+    port: 3

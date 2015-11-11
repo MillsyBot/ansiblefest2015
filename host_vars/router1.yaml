@@ -1,0 +1,6 @@
+host:
+  type: "juniper"
+  name: router1.site1
+  console:
+    ip: 192.168.0.2
+    port: 1

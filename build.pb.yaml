@@ -1,0 +1,16 @@
+---
+- name: Building templates for DMVPN
+  hosts: VLAN10
+  gather_facts: no
+  connection: local
+
+  roles:
+    - vlan
+
+- name: Building templates for DMVPN
+  hosts: VLAN20
+  gather_facts: no
+  connection: local
+
+  roles:
+    - vlan

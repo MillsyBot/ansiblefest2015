@@ -1,0 +1,21 @@
+---
+- name: Apply configuration
+  hosts: all
+  connection: local
+  tags:
+    - always
+  gather_facts: no
+  roles: 
+    - Juniper.junos
+  tasks:
+    - name: assembling configfurations
+      assemble: src={{ build_dir }} dest={{ junos_conf }}
+    - name: Pushing config ... please wait
+      junos_install_config: 
+       host={{ inventory_hostname }}
+       user=root
+       console="--telnet={{ host.console.ip }},{{ host.console.port }}"
+       file={{ junos_conf }}
+       diffs_file={{ junos_diffs }}
+       logfile={{ junos_logfile }}
+       overwrite=yes

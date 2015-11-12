@@ -1,5 +1,4 @@
-
-{% if host.type == juniper %}
+{% if host.type == "juniper" %}
 	{% if host.name.find("router") == 0 %}
 	interfaces vlan {
 		unit {{ vlan.id }} {
@@ -8,14 +7,14 @@
 				}
 			}
 		}
-		vlans {{ vlan.id }} {
+		vlans VL{{ vlan.id }} {
 			l3-interface vlan.{{ vlan.id }};
 		}
 		{% endif %}
-		vlans {{ vlan.id }} {
+		vlans VL{{ vlan.id }} {
 			vlan-id {{ vlan.id }};
 	 }
-{% elseif host.type == arista %}
+{% elif host.type == "arista" %}
 	{% if host.name.find("router") == 0 %}
 		vlan {{ vlan.id }}
 		interface vlan {{ vlan.id }}

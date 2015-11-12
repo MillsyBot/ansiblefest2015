@@ -1,0 +1,10 @@
+---
+build_dir: build/{{ inventory_hostname }}/tmp
+save_dir: build/{{ inventory_hostname }}/inventory
+junos_conf: build/{{ inventory_hostname }}/junos.conf
+junos_set: build/{{ inventory_hostname }}/junos.set
+junos_diffs: build/{{ inventory_hostname }}/junos.diffs
+junos_logfile: build/junos_logfile.log
+
+
+root_hash: "asdasdasdasdas123123hasedpasswordasdasdas1312!"

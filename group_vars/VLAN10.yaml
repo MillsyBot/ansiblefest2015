@@ -4,4 +4,3 @@ vlan:
   default_gateway: 192.168.10.1
   network: 192.168.10.0
   cidr: 24
-    

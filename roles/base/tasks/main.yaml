@@ -1,0 +1,2 @@
+- name: Build VLAN
+  template: src=config.j2 dest={{ build_dir }}/main.base.part

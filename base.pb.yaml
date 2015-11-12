@@ -1,0 +1,8 @@
+---
+- name: Building templates for DMVPN
+  hosts: all
+  gather_facts: no
+  connection: local
+
+  roles:
+    - base

@@ -1,8 +1,10 @@
 [all]
 
-[vlans:children]
-site1 assigned_vlans=["10","20"]
-site2 assigned_vlans=["20"]
+[VLAN10:children]
+site1 
+
+[VLAN20:children]
+site2
 
 [site1]
 router1
@@ -10,4 +12,4 @@ switch1
 
 [site2]
 router2
-switch2ß
+switch2

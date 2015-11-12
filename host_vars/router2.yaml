@@ -1,4 +1,5 @@
 host:
+  type: "juniper"
   name: router2.site2
   console:
     ip: 192.168.0.2
